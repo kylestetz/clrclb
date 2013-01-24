@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var socket = io.connect('http://localhost');
+	var socket = io.connect('clrclb.nodejitsu.com');
 	socket.on('color event', function (data) {
 		// console.log("got a color event on the client side: " + data.id + "  " + data.color);
 		$('#'+data.id).css({ 'background-color': data.color });

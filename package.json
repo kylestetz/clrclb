@@ -6,7 +6,7 @@
     "npm": "1.1.x"
   },
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "3.0.6",
