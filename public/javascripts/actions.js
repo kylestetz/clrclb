@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-	// var socket = io.connect('clrclb.nodejitsu.com');
-	var socket = io.connect('http://localhost');
+	var socket = io.connect('clrclb.nodejitsu.com');
+	// var socket = io.connect('http://localhost');
 
 	socket.on('color event', function (data) {
 		$('#'+data.id).css({ 'background-color': data.color });
