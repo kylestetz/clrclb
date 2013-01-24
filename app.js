@@ -12,11 +12,17 @@ var express = require('express')
 
 var app = express();
 var server = http.createServer(app)
+
 var io = io.listen(server);
-server.listen(3000)
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
+server.listen(23596)
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.PORT || 23596);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(express.favicon());
