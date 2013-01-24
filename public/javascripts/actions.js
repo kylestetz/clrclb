@@ -25,6 +25,7 @@ $(document).ready(function() {
 		$(this).spectrum({
 			clickoutFiresChange: true,
 			showAlpha: false,
+			showButtons: false,
 			change: function(color){
 				// this_colorbox.css({'background-color':color.toHexString()});
 				socket.emit('changed color', { 'id':this_id, 'color':color.toHexString() });

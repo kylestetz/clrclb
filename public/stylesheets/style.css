@@ -6,6 +6,11 @@ body {
   padding: 50px;
   font: 14px "Courier", Helvetica, Arial, sans-serif;
 }
+body .sp-container {
+  width: 200px;
+  border-color: #FFF;
+  border-width: 3px;
+}
 body #title-bar {
   margin-left: 0;
   margin-bottom: 60px;
