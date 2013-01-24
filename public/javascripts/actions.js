@@ -7,13 +7,13 @@ $(document).ready(function() {
 		$('#'+data.id).css({ 'background-color': data.color });
 	});
 
-	socket.on('set active', function(data) {
-		$('#'+data.id).toggleClass('in-use', true);
-	});
+	// socket.on('set active', function(data) {
+	// 	$('#'+data.id).toggleClass('in-use', true);
+	// });
 
-	socket.on('set inactive', function(data) {
-		$('#'+data.id).toggleClass('in-use', false);
-	});
+	// socket.on('set inactive', function(data) {
+	// 	$('#'+data.id).toggleClass('in-use', false);
+	// });
 
 	var colorboxes = $('.colorbox');
 
@@ -35,13 +35,13 @@ $(document).ready(function() {
 					socket.emit('changed color', { 'id':this_id, 'color':color.toHexString() });
 					last_msg = $.now();
 				}
-			},
-			show: function(color){
-				socket.emit('make active', { 'id': this_id });
-			},
-			hide: function(color){
-				socket.emit('make inactive', { 'id': this_id });
-			}
+			} // ,
+			// show: function(color){
+			// 	socket.emit('make active', { 'id': this_id });
+			// },
+			// hide: function(color){
+			// 	socket.emit('make inactive', { 'id': this_id });
+			// }
 		});
 	});
 

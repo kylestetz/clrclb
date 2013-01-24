@@ -19,10 +19,10 @@ var io = io.listen(server);
 //   io.set("polling duration", 10); 
 // });
 
-server.listen(process.env.PORT || 3000)
+server.listen(3000)
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(express.favicon());
@@ -47,12 +47,12 @@ io.sockets.on('connection', function (socket) {
   socket.on('changed color', function (data) {
     io.sockets.emit('color event', data);
   });
-  socket.on('make active', function(data){
-    io.sockets.emit('set active', data);
-  });
-  socket.on('make inactive', function(data){
-    io.sockets.emit('set inactive', data);
-  });
+  // socket.on('make active', function(data){
+  //   io.sockets.emit('set active', data);
+  // });
+  // socket.on('make inactive', function(data){
+  //   io.sockets.emit('set inactive', data);
+  // });
 });
 
 
