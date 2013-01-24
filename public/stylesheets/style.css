@@ -14,8 +14,13 @@ body #title-bar {
   background-image: url('/images/title.png');
 }
 body #colorbox-container {
-  height: 500px;
+  height: 380px;
   width: 1100px;
+}
+body #colorbox-container .in-use {
+  background-image: url('/images/in_use.png');
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 body #colorbox-container .colorbox {
   float: left;

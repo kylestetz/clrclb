@@ -386,15 +386,15 @@ License: MIT
 /* Buttons: http://hellohappy.org/css3-buttons/ */
 .sp-container button {
   background-color: #eeeeee;
-  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+/*  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: linear-gradient(to bottom, #eeeeee, #cccccc);
+  background-image: linear-gradient(to bottom, #eeeeee, #cccccc);*/
   border: 1px solid #ccc;
   border-bottom: 1px solid #bbb;
-  border-radius: 3px;
+  border-radius: 0px;
   color: #333;
   font-size: 14px;
   line-height: 1;
@@ -405,12 +405,12 @@ License: MIT
 }
 .sp-container button:hover {
     background-color: #dddddd;
-    background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+/*    background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
     background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
     background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
     background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
     background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
-    background-image: linear-gradient(to bottom, #dddddd, #bbbbbb);
+    background-image: linear-gradient(to bottom, #dddddd, #bbbbbb);*/
     border: 1px solid #bbb;
     border-bottom: 1px solid #999;
     cursor: pointer;
