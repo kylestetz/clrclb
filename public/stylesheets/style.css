@@ -45,6 +45,24 @@ body #colorbox-container #description {
   height: 25px;
   background-image: url('/images/description.png');
 }
+body #footer {
+  position: absolute;
+  bottom: 0;
+  width: 1100px;
+  height: 30px;
+  background-color: #FFF;
+}
+body #footer #footer-image {
+  margin-left: 6px;
+  margin-top: 6px;
+  width: 290px;
+  background-image: url('/images/footer.png');
+  cursor: pointer;
+  opacity: 0.75;
+}
+body #footer #footer-image:hover {
+  opacity: 1;
+}
 a {
   color: #00B7FF;
 }

@@ -19,10 +19,10 @@ io.configure(function () {
   io.set("polling duration", 10); 
 });
 
-server.listen(process.env.PORT)
+server.listen(process.env.PORT || 3000)
 
 app.configure(function(){
-  app.set('port', process.env.PORT);
+  app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(express.favicon());
