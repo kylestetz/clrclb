@@ -14,10 +14,10 @@ var app = express();
 var server = http.createServer(app)
 
 var io = io.listen(server);
-io.configure(function () { 
-  io.set("transports", ["xhr-polling"]); 
-  io.set("polling duration", 10); 
-});
+// io.configure(function () { 
+//   io.set("transports", ["xhr-polling"]); 
+//   io.set("polling duration", 10); 
+// });
 
 server.listen(process.env.PORT || 3000)
 
