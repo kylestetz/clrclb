@@ -7,12 +7,12 @@ $(document).ready(function() {
 		$('#'+data.id).css({ 'background-color': data.color });
 	});
 
-	socket.on('set active', function(data) {
-		$('#'+data.id).toggleClass('in-use', true);
+	socket.on('set active', function (data) {
+		$('#'+data.id).children('.icon').toggleClass('hidden', false);
 	});
 
-	socket.on('set inactive', function(data) {
-		$('#'+data.id).toggleClass('in-use', false);
+	socket.on('set inactive', function (data) {
+		$('#'+data.id).children('.icon').toggleClass('hidden', true);
 	});
 
 	var colorboxes = $('.colorbox');

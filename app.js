@@ -47,10 +47,10 @@ io.sockets.on('connection', function (socket) {
   socket.on('changed color', function (data) {
     io.sockets.emit('color event', data);
   });
-  socket.on('make active', function(data){
+  socket.on('make active', function (data){
     io.sockets.emit('set active', data);
   });
-  socket.on('make inactive', function(data){
+  socket.on('make inactive', function (data){
     io.sockets.emit('set inactive', data);
   });
 });

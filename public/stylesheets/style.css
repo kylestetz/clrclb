@@ -1,13 +1,39 @@
 * {
   margin: 0 auto;
 }
+.hidden {
+  display: none;
+}
+@font-face {
+  font-family: 'WinterthurCondensedRegular';
+  src: url('/stylesheets/fonts/WinterthurCondensed-webfont.eot');
+  src: url('/stylesheets/fonts/WinterthurCondensed-webfont.eot?#iefix') format('embedded-opentype'), url('/stylesheets/fonts/WinterthurCondensed-webfont.woff') format('woff'), url('/stylesheets/fonts/WinterthurCondensed-webfont.ttf') format('truetype'), url('/stylesheets/fonts/WinterthurCondensed-webfont.svg#WinterthurCondensedRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WinterthurCondensedItalic';
+  src: url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.eot');
+  src: url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.eot?#iefix') format('embedded-opentype'), url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.woff') format('woff'), url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.ttf') format('truetype'), url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.svg#WinterthurCondensedItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ModernPictogramsNormal';
+  src: url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.eot');
+  src: url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.eot?#iefix') format('embedded-opentype'), url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.woff') format('woff'), url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.ttf') format('truetype'), url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-image: url('/images/gray_jean.png');
   padding: 50px;
-  font: 14px "Courier", Helvetica, Arial, sans-serif;
+  font: 20px "WinterthurCondensedRegular", sans-serif;
+  letter-spacing: 1px;
 }
 body .sp-container {
   width: 200px;
+  height: 165px;
   border-color: #FFF;
   border-width: 3px;
 }
@@ -16,7 +42,8 @@ body #title-bar {
   margin-bottom: 60px;
   width: 113px;
   height: 53px;
-  background-image: url('/images/title.png');
+  color: #444;
+  font: 80px "WinterthurCondensedItalic", sans-serif;
 }
 body #colorbox-container {
   height: 380px;
@@ -40,6 +67,34 @@ body #colorbox-container .colorbox .a {
   width: 100%;
   height: 100%;
 }
+body #colorbox-container .colorbox .diamond {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 2px solid #000;
+  margin-left: 100px;
+  margin-top: 100px;
+  /* Rotate */
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  /* Rotate Origin */
+
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+body #colorbox-container .colorbox .icon {
+  font: 60px "ModernPictogramsNormal";
+  color: #444;
+  margin-top: 75px;
+  margin-left: 75px;
+}
 body #colorbox-container .line {
   display: inline-block;
   margin-top: 20px;
@@ -50,28 +105,42 @@ body #colorbox-container .line {
 body #colorbox-container #description {
   display: inline-block;
   margin-left: 0;
-  margin-top: 10px;
-  width: 456px;
+  margin-top: 15px;
+  padding-bottom: 4px;
+  width: 1080px;
   height: 25px;
-  background-image: url('/images/description.png');
+  background-color: #FFF;
+}
+body #colorbox-container #description .description-text {
+  margin-left: 4px;
+  color: #444;
 }
 body #footer {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   width: 1100px;
-  height: 30px;
+  height: 25px;
   background-color: #FFF;
 }
-body #footer #footer-image {
+body #footer #footer-bar {
   margin-left: 6px;
-  margin-top: 6px;
-  width: 290px;
-  background-image: url('/images/footer.png');
-  cursor: pointer;
+  margin-top: 0px;
+  width: 1080px;
   opacity: 0.75;
 }
-body #footer #footer-image:hover {
+body #footer #footer-bar:hover {
   opacity: 1;
+}
+body #footer #footer-bar a:link {
+  text-decoration: none;
+  color: #666;
+}
+body #footer #footer-bar a:visited {
+  text-decoration: none;
+  color: #666;
+}
+body #footer #footer-bar a:hover {
+  color: #990000;
 }
 a {
   color: #00B7FF;

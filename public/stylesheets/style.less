@@ -2,13 +2,56 @@
 	margin: 0 auto;
 }
 
+.hidden {
+	display: none;
+}
+
+@font-face {
+    font-family: 'WinterthurCondensedRegular';
+    src: url('/stylesheets/fonts/WinterthurCondensed-webfont.eot');
+    src: url('/stylesheets/fonts/WinterthurCondensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/stylesheets/fonts/WinterthurCondensed-webfont.woff') format('woff'),
+         url('/stylesheets/fonts/WinterthurCondensed-webfont.ttf') format('truetype'),
+         url('/stylesheets/fonts/WinterthurCondensed-webfont.svg#WinterthurCondensedRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'WinterthurCondensedItalic';
+    src: url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.eot');
+    src: url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.woff') format('woff'),
+         url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.ttf') format('truetype'),
+         url('/stylesheets/fonts/WinterthurCondensedOblique-webfont.svg#WinterthurCondensedItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ModernPictogramsNormal';
+    src: url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.eot');
+    src: url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.woff') format('woff'),
+         url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.ttf') format('truetype'),
+         url('/stylesheets/fonts/modern-pictograms/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 body {
 	background-image: url('/images/gray_jean.png');
   	padding: 50px;
-  	font: 14px "Courier", Helvetica, Arial, sans-serif;
+  	font: 20px "WinterthurCondensedRegular", sans-serif;
+  	letter-spacing: 1px;
 
   	.sp-container {
   		width: 200px;
+  		height: 165px;
   		border-color: #FFF;
   		border-width: 3px;
   	}
@@ -18,7 +61,10 @@ body {
   		margin-bottom: 60px;
   		width: 113px;
   		height: 53px;
-  		background-image: url('/images/title.png');
+  		color: #444;
+  		// font-size: 40px;
+  		font: 80px "WinterthurCondensedItalic", sans-serif;
+  		// background-image: url('/images/title.png');
   	}
 
   	#colorbox-container {
@@ -36,6 +82,8 @@ body {
 
   		}
 
+  		
+
 		.colorbox {
 		  	float: left;
 		  	margin-right: 20px;
@@ -51,6 +99,53 @@ body {
 		  	}
 
 
+			// .diamond {
+			// 	width: 0;
+			// 	height: 0;
+			// 	border: 15px solid transparent;
+			// 	border-bottom-color: white;
+			// 	position: relative;
+			// 	margin-top: 70px;
+			// 	// top: -15px;
+			// }
+			// .diamond:after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	left: -15px;
+			// 	top: 15px;
+			// 	width: 0;
+			// 	height: 0;
+			// 	border: 15px solid transparent;
+			// 	border-top-color: white;
+			// }
+			.diamond {
+			   width: 20px; 
+			   height: 20px; 
+			   background: transparent;
+			   border: 2px solid #000;
+			   margin-left: 100px;
+			   margin-top: 100px;
+			   /* Rotate */
+			   -webkit-transform: rotate(-45deg);
+			   -moz-transform: rotate(-45deg);
+			   -ms-transform: rotate(-45deg);
+			   -o-transform: rotate(-45deg);
+			   transform: rotate(-45deg);
+			   /* Rotate Origin */
+			   -webkit-transform-origin: 0 100%;
+			   -moz-transform-origin: 0 100%;
+			   -ms-transform-origin: 0 100%;
+			   -o-transform-origin: 0 100%;
+			   transform-origin: 0 100%;
+			}
+
+			.icon {
+				font: 60px "ModernPictogramsNormal";
+				color: #444;
+				margin-top: 75px;
+				margin-left: 75px;
+			}
+
 		}
 
 		.line {
@@ -58,35 +153,54 @@ body {
 			margin-top: 20px;
 			width: 1080px;
 			height: 3px;
+			// background-color: #FFF;
 			background-color: #FFF;
 		}
 
 		#description {
-			display: inline-block ;
+			display: inline-block;
+
 			margin-left: 0;
-			margin-top: 10px;
-			width: 456px;
+			margin-top: 15px;
+			padding-bottom: 4px;
+			width: 1080px;
 			height: 25px;
-			background-image: url('/images/description.png');
+			background-color: #FFF;
+
+			.description-text {
+				margin-left: 4px;
+				// margin-bottom: 4px;
+				color: #444;
+			}
 		}
 	}
 
 	#footer {
 		position: absolute;
-		bottom: 0;
+		bottom: 1px;
 		width: 1100px;
-		height: 30px;
+		height: 25px;
 		background-color: #FFF;
 
-		#footer-image {
+		#footer-bar {
 			margin-left: 6px;
-			margin-top: 6px;
-			width: 290px;
-			background-image: url('/images/footer.png');
-			cursor: pointer;
+			margin-top: 0px;
+			width: 1080px;
+			// cursor: pointer;
 			opacity: 0.75;
 			&:hover {
 				opacity: 1;
+			}
+			a:link {
+				text-decoration: none;
+				color: #666;
+			}
+			a:visited {
+				text-decoration: none;
+				color: #666;
+			}
+			a:hover {
+				color: #990000;
 			}
 		}
 	}
